@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e7f1f0;
+}
+ul li {
+  list-style-type: none;
+}
+.Grid-Container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+header {
+  grid-column: span 3;
+  text-align: center;
+  margin: 20px;
+  border-bottom: 1px solid #767f7e;
+  padding: 20px;
+}
+footer {
+  grid-column: span 3;
+  text-align: center;
+  border-top: 1px solid #767f7e;
+  padding: 20px;
+  font-size: 18px;
+}
+nav {
+  text-align: left;
+  margin-left: 10px;
+  border-right: 1px solid #767f7e;
+  p {
+    margin: 20px 0px;
+  }
+  ul li {
+    text-decoration: underline;
+  }
+}
+aside {
+  text-align: left;
+  margin-left: 10px;
+  border-left: 1px solid #767f7e;
+  padding-left: 15px;
+  /* border-right: 1px solid #767f7e; */
+  p {
+    margin: 20px 0px;
+  }
+  ul li {
+    margin: 10px;
+  }
+}
+main {
+  margin: 40px;
+  h1 {
+    font-size: 55px;
+    margin: 10px 0px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  img {
+    height: 500px;
+    width: 800px;
+    place-items: center;
+    border-radius: 8px;
+    border: 5px solid gray;
+  }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 920px) {
+  nav {
+    grid-column: span 3;
+    ul {
+      display: flex;
+      li {
+        margin: 0px 20px;
+      }
+    }
+  }
+  aside {
+    grid-column: span 3;
+    border-top: 2px solid #767f7e;
+    border-left: 0px;
+    ul {
+      display: flex;
+    }
+    ul li {
+      margin: 5px;
+    }
+  }
+}
+
+/* Mobile 320px */
+@media (min-width: 320px) and (max-width:479px)  {
+  header {
+    text-align: left;
+  }
+  nav {
+    p {
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  main {
+    margin: 8px;
+    h1 {
+      font-size: 32px;
+    }
+    img {
+      height: 200px;
+      width: 300px;
+      place-items: center;
+      border-radius: 8px;
+      border: 5px solid gray;
+    }
+    p {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width:801px) {
+  .Grid-Container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  main img {
+    height: 200px;
+    width: 450px;
+  }
+}
